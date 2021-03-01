@@ -23,7 +23,7 @@ function VaxTable({ locations, reports }) {
             {locations.map((location) => {
               let attempts = reports?.filter(report => report.locationId === location.id).length;
               let successes = reports?.filter(report => report.locationId === location.id && report.success).length;
-              let rate = attempts === 0 ? 0 : (successes / attempts) * 100;
+              let rate = attempts === 0 ? 0 : ((successes / attempts) * 100).toFixed(2);
               return (
                 <TableRow key={location.id}>
                   <TableCell component="th" scope="row">{location.name}</TableCell>

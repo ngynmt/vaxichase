@@ -67,7 +67,9 @@ function RecordEntry({ locations }) {
             locationId: locationHash,
           }
         })
-        window.location.reload();
+
+        window.setTimeout(() => window.location.reload(), 1000);
+        
       }}>
         <PlacesAutocomplete
           value={address}
