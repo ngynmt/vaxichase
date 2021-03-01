@@ -32,7 +32,7 @@ const READ_REPORTS = gql`
 
 function App() {
   let { data, loading, error } = useQuery(READ_LOCATIONS);
-  let { data: reportData, loading: reportLoading, error: .messagereportError } = useQuery(READ_REPORTS);
+  let { data: reportData, loading: reportLoading, error: reportError } = useQuery(READ_REPORTS);
   const [modalIsOpen, toggleModal] = useState(false);
   const [delayed, setDelayed] = useState(true);
   
