@@ -38,7 +38,9 @@ function App() {
   
   setTimeout(() => setDelayed(false), 2000);
   if (delayed || loading || reportLoading) return <Landing />;
-  if (error || reportError) return <p>An error occurred.</p>;
+  if (error || reportError) {
+    return error ? <p>{error}</p> : <p>{reportError}</p>
+  };
   if (!data) return <p>Records not found.</p>;
 
   return (
