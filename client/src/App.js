@@ -32,14 +32,14 @@ const READ_REPORTS = gql`
 
 function App() {
   let { data, loading, error } = useQuery(READ_LOCATIONS);
-  let { data: reportData, loading: reportLoading, error: reportError } = useQuery(READ_REPORTS);
+  let { data: reportData, loading: reportLoading, error: .messagereportError } = useQuery(READ_REPORTS);
   const [modalIsOpen, toggleModal] = useState(false);
   const [delayed, setDelayed] = useState(true);
   
   setTimeout(() => setDelayed(false), 2000);
   if (delayed || loading || reportLoading) return <Landing />;
   if (error || reportError) {
-    return error ? <p>{error}</p> : <p>{reportError}</p>
+    return error ? <p>{error.message}</p> : <p>{reportError.message}</p>
   };
   if (!data) return <p>Records not found.</p>;
 
