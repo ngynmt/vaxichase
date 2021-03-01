@@ -34,14 +34,15 @@ function App() {
   let { data, loading, error } = useQuery(READ_LOCATIONS);
   let { data: reportData, loading: reportLoading, error: reportError } = useQuery(READ_REPORTS);
   const [modalIsOpen, toggleModal] = useState(false);
-
-  // loading = true;
-  if (loading || reportLoading ) return <Landing />;
+  const [delayed, setDelayed] = useState(true);
+  
+  setTimeout(() => setDelayed(false), 2000);
+  if (delayed || loading || reportLoading) return <Landing />;
   if (error || reportError) return <p>An error occurred.</p>;
   if (!data) return <p>Records not found.</p>;
 
   return (
-    <div className="app">
+    <div className="app animate__animated animate__fadeIn">
       <Modal open={modalIsOpen} onClose={() => toggleModal(false)} className="modal-container">
         <RecordEntry locations={data.locations} reports={reportData?.reports} />
       </Modal>

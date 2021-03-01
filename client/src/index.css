@@ -28,6 +28,8 @@ code {
   flex-direction: column;
   justify-content: center;
   height: 90vh;
+  margin: 0 auto;
+  max-width: 1024px;
   padding: 8px 32px;
 }
 
@@ -73,6 +75,12 @@ h1 {
 
 .gutters {
   padding: 8px;
+
+}
+@media only screen and (min-width: 1024px) {
+  .gutters {
+    padding: 8px 0;
+  }
 }
 
 .modal-container {
@@ -101,4 +109,114 @@ h1 {
 
 .suggestion-item, .suggestion-item--active {
   padding: 8px 0;
+
+}
+
+.animate__animated{
+  -webkit-animation-duration: .5s;
+  animation-duration:.5s;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+
+@-webkit-keyframes fadeOutDown{
+  0%{
+      opacity:1
+  }
+  to{
+      opacity:0;
+      -webkit-transform:translate3d(0,100%,0);
+      transform:translate3d(0,100%,0)
+  }
+}
+@keyframes fadeOutDown{
+  0%{
+      opacity:1
+  }
+  to{
+      opacity:0;
+      -webkit-transform:translate3d(0,100%,0);
+      transform:translate3d(0,100%,0)
+  }
+}
+.animate__fadeOutDown{
+  -webkit-animation-name:fadeOutDown;
+  animation-name:fadeOutDown
+}
+
+@-webkit-keyframes slideOutLeft{
+  0%{
+      -webkit-transform:translateZ(0);
+      transform:translateZ(0)
+  }
+  to{
+      visibility:hidden;
+      -webkit-transform:translate3d(-100%,0,0);
+      transform:translate3d(-100%,0,0)
+  }
+}
+@keyframes slideOutLeft{
+  0%{
+      -webkit-transform:translateZ(0);
+      transform:translateZ(0)
+  }
+  to{
+      visibility:hidden;
+      -webkit-transform:translate3d(-100%,0,0);
+      transform:translate3d(-100%,0,0)
+  }
+}
+.animate__slideOutLeft{
+  -webkit-animation-name:slideOutLeft;
+  animation-name:slideOutLeft
+}
+
+@-webkit-keyframes slideInRight{
+  0%{
+      -webkit-transform:translate3d(100%,0,0);
+      transform:translate3d(100%,0,0);
+      visibility:visible
+  }
+  to{
+      -webkit-transform:translateZ(0);
+      transform:translateZ(0)
+  }
+}
+@keyframes slideInRight{
+  0%{
+      -webkit-transform:translate3d(100%,0,0);
+      transform:translate3d(100%,0,0);
+      visibility:visible
+  }
+  to{
+      -webkit-transform:translateZ(0);
+      transform:translateZ(0)
+  }
+}
+.animate__slideInRight{
+  -webkit-animation-name:slideInRight;
+  animation-name:slideInRight
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+.animate__fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn
 }
