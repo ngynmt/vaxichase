@@ -3,7 +3,7 @@ import React from 'react';
 function Landing() {
   return (
     <div className="landing">
-      <h1>Vaxichase</h1>
+      <h1>vaxichase</h1>
       <div className="emojis animate__animated animate__slideInRight animate__slideOutLeft">
       💉🏃‍♂️🏃‍♀️🏃🦠
       </div>
