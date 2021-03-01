@@ -1,0 +1,17 @@
+{
+  "name": "graph-ql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "graphql.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-lambda": "^2.21.0",
+    "dotenv": "^8.2.0",
+    "faunadb": "^4.1.1",
+    "graphql": "^15.5.0"
+  }
+}
