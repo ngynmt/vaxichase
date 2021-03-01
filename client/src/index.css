@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.form-section {
+  display: block;
+  margin: 20px auto;
+}
+
+.landing {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  padding: 8px 32px;
+}
+
+.landing > h1 {
+  color: #3f51b5;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.landing > p {
+  color: gray;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.emojis {
+  font-size: 32px;
+  margin: 32px auto;
+}
+
+.marker-info {
+  padding: 0 8px;
+}
+
+.radio-group {
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.record-entry {
+  position: relative;
+  margin: 32px;
+}
+
+.vax-map {
+  height: 400px;
+  position: relative;
+}
+
+.gutters {
+  padding: 8px;
+}
+
+.modal-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px 32px 32px;
+}
+
+.table {
+  position: relative;  
+}
+
+.button--fw {
+  width: 100%;
+}
+
+.location-search-input {
+  width: 100%;
+}
+
+.suggestion-item, .suggestion-item--active {
+  padding: 8px 0;
+}
