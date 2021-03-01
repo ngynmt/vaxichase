@@ -53,6 +53,11 @@ function App() {
         <Button variant="contained" color="primary" className="button--fw" onClick={() => toggleModal(true)}>Add Entry</Button>
       </div>
       <VaxTable locations={data.locations} reports={reportData?.reports} />
+      <div className="footer subtext">
+          <p>Did you know? Some COVID-19 vaccine doses are only usable for several hours after being thawed from their subzero storage temperature.
+          Prevent the waste of extra doses by sharing your successful and failed attempts to get a leftover dose at the end of the day at a specific location.</p>
+          <p className="about-app">This application was built by <a href="https://linkedin.com/in/nguyenchelle">Michelle Nguyen</a> with React, Node.js, GraphQL and FaunaDB. Deployed on Netlify.</p>
+      </div>
     </div>
   );
 }
